@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRO.ROI.Automation", "MRO.ROI.Automation\MRO.ROI.Automation.csproj", "{A29E0832-8A6C-410A-BC76-824B3DBEF0A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRO.ROI.Test", "MRO.ROI.Test\MRO.ROI.Test.csproj", "{DF7FABD1-C321-4EDE-B20D-4FBF141D833C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A29E0832-8A6C-410A-BC76-824B3DBEF0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29E0832-8A6C-410A-BC76-824B3DBEF0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29E0832-8A6C-410A-BC76-824B3DBEF0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29E0832-8A6C-410A-BC76-824B3DBEF0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7FABD1-C321-4EDE-B20D-4FBF141D833C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7FABD1-C321-4EDE-B20D-4FBF141D833C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7FABD1-C321-4EDE-B20D-4FBF141D833C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7FABD1-C321-4EDE-B20D-4FBF141D833C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D7315EC-C2E0-43A3-AB39-F163F0FCA679}
+	EndGlobalSection
+EndGlobal

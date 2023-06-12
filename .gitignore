@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+/.vs
+/MRO.AutomationTest.Solution/.vs/MRO.AutomationTest.Solution/v16
+/MRO.AutomationTest.Solution/MRO.ROI.Automation/bin/Debug
+/MRO.AutomationTest.Solution/MRO.ROI.Test/obj/Debug
+/MRO.AutomationTest.Solution/MRO.ROI.Automation/obj/Debug
+/MRO.AutomationTest.Solution/MRO.ROI.Test/Reports/**
+/MRO.AutomationTest.Solution/packages
+/MRO.AutomationTest.Solution/MRO.ROI.Test/bin/Debug

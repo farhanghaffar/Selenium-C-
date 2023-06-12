@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	
+  <!-- Configurations that affect the Test Framework -->
+  <RunConfiguration>
+	  <MaxCpuCount>1</MaxCpuCount>
+	  
+    <!-- Path relative to solution directory -->
+    <ResultsDirectory>.\TestResults</ResultsDirectory>
+	  
+    <!-- x86 or x64 -->
+    <!-- You can also change it from the top-level menu Test > Test Settings > Processor Architecture for AnyCPU Projects -->
+    <TargetPlatform>x86</TargetPlatform>
+
+    <TargetFrameworkVersion>Framework45</TargetFrameworkVersion>
+
+  </RunConfiguration>
+
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>
+	<Parameter name="MroExpressUrl" value="https://mrorwzuat.azurewebsites.net/?guid=9095CE46-667C-4A60-8E90-B54260DA9973" />
+	<Parameter name="USPSZonesUrl" value="https://postcalc.usps.com/DomesticZoneChart" />
+    <Parameter name="webAppUrl" value="https://staging.mrocorp.com/net4.0/Login/dev/login/LoginMenu.aspx" />
+    <Parameter name="hqiisstgwebAppUrl" value="https://hqiisstg.mro.com/net4.0/Login/dev/login/LoginMenu.aspx" />
+    <Parameter name="driverPath" value="" />
+	<Parameter name="browser" value="Chrome" />
+    <Parameter name="facilityUserName" value="akothuri" />
+    <Parameter name="facilityPassword" value="TestingMRO@123" />
+    <Parameter name="adminUserName" value="cigniti-akothuri" />
+    <Parameter name="adminPassword" value="TestingMRO@123" />
+	<Parameter name="adminTwoUserName" value="cigniti-ssaligrama" />
+	<Parameter name="adminTwoPassword" value="cigniti@1359" />
+	<Parameter name="QbReportUserName" value="cigniti-akothuri" />
+	<Parameter name="QbReportPassword" value="TestingMRO@123" />
+    <Parameter name="rqrPortalUserName" value="fpeedulla" />
+    <Parameter name="rqrPortalPassword" value="Great@123" />
+    <Parameter name="intPortalUserName" value="mro" />
+    <Parameter name="intPortalPassword" value="TestingMRO@123" />
+	<Parameter name="ironmountainUserName" value="irm-seleniumautomation" />
+	<Parameter name="ironmountainPassword" value="Testmro1$" />
+	<Parameter name="boeIntPortalUserName" value="int-Mvadkapur" />
+    <Parameter name="boeIntPortalPassword" value="Mammu@12345" />
+	<Parameter name="boeAdminUserName" value="cigniti-mvadkapur" />
+    <Parameter name="boeAdminPassword" value="Mammu@123" />
+	<Parameter name="extPortalUserName" value="akothuri" />
+	<Parameter name="extPortalPassword" value="TestingMRO@12345" />
+	<Parameter name="roiFacilityUserName" value="AKothuri" />
+	<Parameter name="roiFacilityPassword" value="TestingMRO@987" />
+	<Parameter name="cboUserName" value="CBO-akothuri" />
+    <Parameter name="cboPassword" value="TestingMRO@1234" />
+	<Parameter name="testingFacilityUserName" value="Testcigniti4" />
+	<Parameter name="testingFacilityUserPassword" value="TestingMRO@1234" />
+    <Parameter name="BaseURI" value="https://staging.mrocorp.com/ExtWebAPI/release/api/RequestIngestion" />
+    <Parameter name="ContentType" value="application/x-www-form-urlencoded" />
+    <Parameter name="Authorization" value="Basic d2MtZXh0YXBpOnRlc3RpbmcxMjMh" />
+    <Parameter name="StatusURI" value="https://staging.mrocorp.com/ExtWebAPI/dev/api/status/" />
+	<Parameter name="ResponseURI" value="https://staging.mrocorp.com/ExtWebAPI/release/api/codes/facilities" />
+	<Parameter name="FacilityResponseURI" value="https://staging.mrocorp.com/ExtWebAPI/release/api/codes/facilities" />
+	<Parameter name="ReportsLocation" value="\\HQFS01\mrofileshare\Departments\Technology\QA\Automation_Regression_Reports\" />
+	<Parameter name="IniFileBaseLocation" value="C:\Users\E006373\Source\Repos\MROTestAutomation\MRO.AutomationTest.Solution\MRO.ROI.Test\TestData\MRO.ini" />
+	<Parameter name="EmailsLocation" value="\\HQSANSTG04b\Email" />
+	</TestRunParameters>
+</RunSettings>

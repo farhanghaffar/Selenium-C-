@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A29E0832-8A6C-410A-BC76-824B3DBEF0A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRO.ROI.Automation</RootNamespace>
+    <AssemblyName>MRO.ROI.Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a646454c8d475470, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoItX.Dotnet.3.3.14.5\lib\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+    <Reference Include="bcmail-jdk15-1.44, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\bcmail-jdk15-1.44.dll</HintPath>
+    </Reference>
+    <Reference Include="bcprov-jdk15-1.44, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\bcprov-jdk15-1.44.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-logging, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\commons-logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="EAGetMail, Version=5.2.2.1, Culture=neutral, PublicKeyToken=e10a0812eb29cf94, processorArchitecture=MSIL">
+      <HintPath>..\packages\EAGetMail.5.2.2.1\lib\net461\EAGetMail.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtentReports, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.4.0.3\lib\ExtentReports.dll</HintPath>
+    </Reference>
+    <Reference Include="fontbox-1.8.2, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\fontbox-1.8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="icu4j-3.8, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\icu4j-3.8.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="jempbox-1.8.2, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\jempbox-1.8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="junit, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\junit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.7.2\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.7.2\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.7.2\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="pdfbox-1.8.2, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pdfbox.1.1.1\lib\pdfbox-1.8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Surviveplus.CodedUITestPlus, Version=1.0.2.8, Culture=neutral, PublicKeyToken=8bef33aba4cdebf4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Surviveplus.CodedUITestPlus.1.0.2.8\lib\net45\Surviveplus.CodedUITestPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad, processorArchitecture=MSIL">
+      <HintPath>..\packages\InputSimulator.1.0.4.0\lib\net20\WindowsInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Iframe.cs" />
+    <Compile Include="Common\SeleniumLocators.cs" />
+    <Compile Include="Common\FacilityMenuNavigation.cs" />
+    <Compile Include="Common\InternalUserNavigation.cs" />
+    <Compile Include="Common\LoginMenuPage.cs" />
+    <Compile Include="Common\LoginPage.cs" />
+    <Compile Include="Common\MenuSelector.cs" />
+    <Compile Include="Common\MROFunctions.cs" />
+    <Compile Include="Pages\CloseRequest.cs" />
+    <Compile Include="Pages\ROIAdminFindaRequestPage.cs" />
+    <Compile Include="Pages\ROIAdminUPSPSRateManagementPage.cs" />
+    <Compile Include="Pages\ROIFacilityCompleteLoggingPage.cs" />
+    <Compile Include="Pages\ROIFacilityMonthlySummaryReportPage.cs" />
+    <Compile Include="Pages\ROIRequestActionsPage.cs" />
+    <Compile Include="Pages\ROIFacilityDeliveryReportPage.cs" />
+    <Compile Include="Pages\MroExpressWizardPage.cs" />
+    <Compile Include="Pages\PendingExternalSiteDeliveryReportPage.cs" />
+    <Compile Include="Pages\ROIActionSummaryReportPage.cs" />
+    <Compile Include="Pages\ROIAddMROToMROActionItemPage.cs" />
+    <Compile Include="Pages\ROIPendingReportPage.cs" />
+    <Compile Include="Pages\ROIFacilityDocumentsRequiredPage.cs" />
+    <Compile Include="Pages\ROIAdminDocumentsRequiredPage.cs" />
+    <Compile Include="Pages\ROIAdminPackingListsPage.cs" />
+    <Compile Include="Pages\ROIFacilitySecurityROITestFacilityPage.cs" />
+    <Compile Include="Pages\ROIAdminProfitabilityReportPage.cs" />
+    <Compile Include="Pages\ROIChangePasswordPage.cs" />
+    <Compile Include="Pages\ROIAdminIssueValidationReportPage.cs" />
+    <Compile Include="Pages\ROIAdminPatientLookupPage.cs" />
+    <Compile Include="Pages\ROIAdminRebatesReportPage.cs" />
+    <Compile Include="Pages\ROIFacilityActionListPage.cs" />
+    <Compile Include="Pages\ROIFacilityFindARequestPage.cs" />
+    <Compile Include="Pages\ROIInvoicingQueuePage.cs" />
+    <Compile Include="Pages\ROIRequestIssuesPage.cs" />
+    <Compile Include="Pages\ROIManageRequestIssuesPage.cs" />
+    <Compile Include="Pages\ROIAdminPendingReportPage.cs" />
+    <Compile Include="Pages\ROIAdminRequestStatusProcessingPage.cs" />
+    <Compile Include="Pages\ROIAdminTurnaroundReportPage.cs" />
+    <Compile Include="Pages\ROIFacilityStaffActivityReportPage.cs" />
+    <Compile Include="Pages\ROIRequestImagingDeliveryPage.cs" />
+    <Compile Include="Pages\ROIAdminAuditLogPage.cs" />
+    <Compile Include="Pages\ROIAdminBatchScanPage.cs" />
+    <Compile Include="Pages\ROIAdminDeferredProcessPage.cs" />
+    <Compile Include="Pages\ROIAdminLogChecksPage.cs" />
+    <Compile Include="Pages\ROIadminMonthlyStatementReportDetailsPage.cs" />
+    <Compile Include="Pages\ROIadminScanRequestDocumentsPage.cs" />
+    <Compile Include="Pages\ROIAdminUSPSRateManagementPage.cs" />
+    <Compile Include="Pages\ROIAdminAddNewPaymentMethodPage.cs" />
+    <Compile Include="Pages\FacilityMenuNavigation.cs" />
+    <Compile Include="Pages\LogNewRequestPage.cs" />
+    <Compile Include="Pages\MenuSelector.cs" />
+    <Compile Include="Pages\ROIAdminCCPrintableReceiptPage.cs" />
+    <Compile Include="Pages\ROIAdminCCShoppingCartPage.cs" />
+    <Compile Include="Pages\ROIAdminCreditCardPaymentReceiptPage.cs" />
+    <Compile Include="Pages\ROIAdminEditRequesterInfoPage.cs" />
+    <Compile Include="Pages\ROIAdminExpressDashboardPage.cs" />
+    <Compile Include="Pages\ROIAdminFacilityFeaturesRenownHealthPage.cs" />
+    <Compile Include="Pages\ROICBOCreateRequestPage.cs" />
+    <Compile Include="Pages\ROICBORequestStatusPage.cs" />
+    <Compile Include="Pages\ROIConfirmDeliveryMethodsPage.cs" />
+    <Compile Include="Pages\ROICreateRequestPage.cs" />
+    <Compile Include="Pages\ROIFacilityBatchProcessingReportPage.cs" />
+    <Compile Include="Pages\ROIFacilityComponentImportMappingConfigurationPage.cs" />
+    <Compile Include="Pages\ROIAdminFeaturesPage.cs" />
+    <Compile Include="Pages\ROIAdminPackingListstPage.cs" />
+    <Compile Include="Pages\ROIAdminAddIssuePage.cs" />
+    <Compile Include="Pages\ROIAdminAddNewUserPage.cs" />
+    <Compile Include="Pages\ROIAdminDeferredRevenueRolloverReportPage.cs" />
+    <Compile Include="Pages\ROIAdminEditFacilityPolicyPage.cs" />
+    <Compile Include="Pages\ROIAdminEditUserInfoPage.cs" />
+    <Compile Include="Pages\ROIAdminFacilityFeaturesPage.cs" />
+    <Compile Include="Pages\ROIAdminFacilityPoliciesPage.cs" />
+    <Compile Include="Pages\ROIAdminFacilityWorkSummarypage.cs" />
+    <Compile Include="Pages\ROIAdminAddContractPage.cs" />
+    <Compile Include="Pages\ROIAdminAssignROIRequesterPage.cs" />
+    <Compile Include="Pages\ROIAdminContractListPage.cs" />
+    <Compile Include="Pages\ROIAdminFacilityListPage.cs" />
+    <Compile Include="Pages\ROIAdminHomePage.cs" />
+    <Compile Include="Pages\ROIAdminLedgerDetailPage.cs" />
+    <Compile Include="Pages\ROIAdminPaymentApprovedPage.cs" />
+    <Compile Include="Pages\ROIAdminReconciliationReportPage.cs" />
+    <Compile Include="Pages\ROIAdminReportsFilterPage.cs" />
+    <Compile Include="Pages\ROIAdminRequestStatusPage.cs" />
+    <Compile Include="Pages\ROIAdminSavedReportsPage.cs" />
+    <Compile Include="Pages\ROIAdminsFTPViewerPage.cs" />
+    <Compile Include="Pages\ROIAdminShipmentDetailsPage.cs" />
+    <Compile Include="Pages\ROIAdminShipmentsReportPage.cs" />
+    <Compile Include="Pages\ROIAdminStaffedSiteInvoicePage.cs" />
+    <Compile Include="Pages\ROIAdminTPAActivityReportPage.cs" />
+    <Compile Include="Pages\ROIAdminTransactionalModelReportPage.cs" />
+    <Compile Include="Pages\ROIAdminUpdatePatientInformationPage.cs" />
+    <Compile Include="Pages\ROIAdminUpdateRequestBillingDetailsPage.cs" />
+    <Compile Include="Pages\ROIAdminUserListingPage.cs" />
+    <Compile Include="Pages\ROIAdminUsersPage.cs" />
+    <Compile Include="Pages\ROIAdminVerifyActiveContractsPage.cs" />
+    <Compile Include="Pages\ROIAdminWriteOffsPage.cs" />
+    <Compile Include="Pages\ROIFacilityAddComponentPage.cs" />
+    <Compile Include="Pages\ROIFacilityAuditLogPage.cs" />
+    <Compile Include="Pages\ROIFacilityComplianceReviewPage.cs" />
+    <Compile Include="Pages\ROIFacilityEditUserInfoPage.cs" />
+    <Compile Include="Pages\ROIFacilityEnterpriseDashboardPage.cs" />
+    <Compile Include="Pages\ROIFacilityFeaturesROITestFacilityPage.cs" />
+    <Compile Include="Pages\ROIFacilityImportFilePage.cs" />
+    <Compile Include="Pages\ROIFacilityLocationReportPage.cs" />
+    <Compile Include="Pages\ROIFacilityLocationROITestFacilityPage.cs" />
+    <Compile Include="Pages\ROIFacilityInfoROITestFacilityPage.cs" />
+    <Compile Include="Pages\ROIFacilityKeyBatchInfoPage.cs" />
+    <Compile Include="Pages\ROIFacilityLinkToAnotherRequestPage.cs" />
+    <Compile Include="Pages\ROIFacilityCompleteLoggingImportRequestPage.cs" />
+    <Compile Include="Pages\ROIFacilityLogNewRequestPage.cs" />
+    <Compile Include="Pages\ROIFacilityRequestStatusPage.cs" />
+    <Compile Include="Pages\ROIFacilityScanRequestDocumentsPage.cs" />
+    <Compile Include="Pages\ROIFacilitySummaryDashBoardPage.cs" />
+    <Compile Include="Pages\ROIFacilityTurnaroundReportPage.cs" />
+    <Compile Include="Pages\ROIFacilityUserListingPage.cs" />
+    <Compile Include="Pages\ROIAdminMonthlyStatementReportPage.cs" />
+    <Compile Include="Pages\ROIFacilityWorkSummaryPage.cs" />
+    <Compile Include="Pages\ROIPayForRecordsPage.cs" />
+    <Compile Include="Pages\ROIRequestersListPage.cs" />
+    <Compile Include="Pages\ROIDailyShipmentsReportPage.cs" />
+    <Compile Include="Pages\ROIRequestPreAuthorizationPage.cs" />
+    <Compile Include="Pages\ROIRevenueIntegrityDashboard.cs" />
+    <Compile Include="Pages\ROIRSSRequestStatusPage.cs" />
+    <Compile Include="Pages\ROISystemInfoPage.cs" />
+    <Compile Include="Pages\ROITestFacilityDocumentTypesPage.cs" />
+    <Compile Include="Pages\ROITestFacilityUserFlagsPage.cs" />
+    <Compile Include="Pages\ROITestRequesterPortalHomePage.cs" />
+    <Compile Include="Pages\ROIAdminActionListPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Selenium\ExtentHelper.cs" />
+    <Compile Include="Selenium\PageElements_Set4.cs" />
+    <Compile Include="Selenium\PageElements_Set3.cs" />
+    <Compile Include="Selenium\PageElements_Set1.cs" />
+    <Compile Include="Selenium\PageElements_Set2.cs" />
+    <Compile Include="Selenium\SeleniumHelper.cs" />
+    <Compile Include="Selenium\WebElementHelper.cs" />
+    <Compile Include="Selenium\DBConnection.cs" />
+    <Compile Include="Utility\CSVReader.cs" />
+    <Compile Include="Utility\IniFile.cs" />
+    <Compile Include="Utility\KernelBaseType.cs" />
+    <Compile Include="Utility\PaginationUtil.cs" />
+    <Compile Include="Utility\UiHelper.cs" />
+    <Compile Include="Utility\ExcelReader.cs" />
+    <Compile Include="Utility\ScannerUtil.cs" />
+    <Compile Include="Utility\UnzipFiles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\lanscater.tif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\SamplePicture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\12.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\2.Pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\200.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\20pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\22.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\21.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\4.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\5.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\6.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\7.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\8.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\800.pdf" />
+    <None Include="Files\9.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Carilion.PDF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\DuplicateTest2.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Mile.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\MixedOrientation.pdf" />
+    <None Include="Files\OriginalTest1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\PAN.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\PhotoShop.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\SampleBatch.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\samplepdfdoc-converted.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\StatOption.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\test.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Test1.pdf" />
+    <None Include="Files\Test1200Pdf.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Test2.pdf" />
+    <None Include="Files\test400.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\test800.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\TestSample1.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\TestSample2.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\TestSample3.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\TestSample4.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\TestSample5.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\TestSample6.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\UnityPoint2.PDF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\UnityPoint3.PDF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Wellspan.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Yale Test PDF.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Files\Yale.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.105.0.5195.5200\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.105.0.5195.5200\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets" Condition="Exists('..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.105.0.5195.5200\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.105.0.5195.5200\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>

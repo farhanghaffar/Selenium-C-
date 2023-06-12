@@ -1,0 +1,64 @@
+# ASP.NET Core (.NET Framework)
+
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- main
+  
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+pool:
+
+  #name: 'MaheshTest'  
+  name: 'MROAutomationTesting' 
+
+steps:
+
+- task: VisualStudioTestPlatformInstaller@1
+  inputs:
+    packageFeedSelector: 'nugetOrg'
+    versionSelector: 'latestPreRelease'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    
+- task: DeleteFiles@1
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)\MRO.AutomationTest.Solution\MRO.ROI.Test\Reports'
+    Contents: '**/*'
+  
+- task: VSTest@2
+  timeoutInMinutes: 0  
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    testFiltercriteria: 'TestCategory=Regression'
+    overrideTestrunParameters: '-browser Chrome'
+    runSettingsFile: '$(System.DefaultWorkingDirectory)\MRO.AutomationTest.Solution\MRO.ROI.Test\Settings\staging.runsettings'
+    runInParallel: true
+    runTestsInIsolation: true
+    distributionBatchType: 'basedOnAssembly'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'  
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'MRO.AutomationTest.Solution\MRO.ROI.Test\Reports'
+    ArtifactName: 'Reports'
+  condition: succeededOrFailed()
+
+
+  
